@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 199 89% 48%; /* sky-500: #0ea5e9 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 35%; /* 从 46.9% 降低到 35%，提高对比度 */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 80%; /* 从 91.4% 降低到 80%，使边框更明显 */
+    --input: 214.3 31.8% 80%; /* 从 91.4% 降低到 80%，使输入框边框更明显 */
+    --ring: 199 89% 48%; /* sky-500: #0ea5e9 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 48%; /* sky-500: #0ea5e9 */
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%; /* 深色模式下提高亮度，确保对比度 */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%; /* 深色模式下使用更明显的边框 */
+    --input: 217.2 32.6% 17.5%;
+    --ring: 199 89% 48%; /* sky-500: #0ea5e9 */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 自定义滚动条样式 */
+@layer utilities {
+  /* Webkit 浏览器 (Chrome, Safari, Edge) */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-500 rounded-full; /* 提高对比度：从 gray-300/600 改为 gray-400/500 */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-400; /* 提高对比度 */
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    @apply bg-gray-600 dark:bg-gray-300; /* 提高对比度 */
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) transparent; /* gray-400，提高对比度 */
+  }
+
+  .dark * {
+    scrollbar-color: rgb(107 114 128) transparent; /* gray-500，提高对比度 */
+  }
+
+  /* 针对特定元素的滚动条样式 */
+  .overflow-y-auto::-webkit-scrollbar,
+  .overflow-x-auto::-webkit-scrollbar,
+  .overflow-auto::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* 编辑页面滚动条样式 */
+  #left-scroll-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  #left-scroll-container::-webkit-scrollbar-thumb {
+    @apply bg-transparent rounded-none;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  #left-scroll-container:hover::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+  #left-scroll-container::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-400;
+  }
+}
+

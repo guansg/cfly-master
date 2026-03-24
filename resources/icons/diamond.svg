@@ -1,0 +1,64 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- 钻石图标 - 基于 Calicat 设计数据生成 -->
+  
+  <!-- 外层菱形描边 -->
+  <path 
+    d="M 128 24 L 232 128 L 128 232 L 24 128 Z" 
+    fill="none" 
+    stroke="#4A90E2" 
+    stroke-width="4" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- 中央顶部面 (风筝形状) -->
+  <path 
+    d="M 128 24 L 80 96 L 128 168 L 176 96 Z" 
+    fill="#D6E9FF" 
+    stroke="#6BA5E7" 
+    stroke-width="2" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- 左上三角面 -->
+  <path 
+    d="M 128 24 L 24 128 L 80 96 Z" 
+    fill="#A4CEF7" 
+    stroke="#4A90E2" 
+    stroke-width="2" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- 右上三角面 -->
+  <path 
+    d="M 128 24 L 176 96 L 232 128 Z" 
+    fill="#B9E0FF" 
+    stroke="#4A90E2" 
+    stroke-width="2" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- 左下四边形面 -->
+  <path 
+    d="M 80 96 L 24 128 L 128 232 L 128 168 Z" 
+    fill="#B9E0FF" 
+    stroke="#5A9CE0" 
+    stroke-width="2" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- 右下四边形面 -->
+  <path 
+    d="M 176 96 L 128 168 L 128 232 L 232 128 Z" 
+    fill="#A4CEF7" 
+    stroke="#5A9CE0" 
+    stroke-width="2" 
+    stroke-linecap="butt" 
+    stroke-linejoin="miter"
+  />
+</svg>
+
